@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Callback</title>
+</head>
+<body>
+<!--БЛОК 1. Callback и анонимные функции-->
+<!--<script>
+    //callback - функция обратного вызова, которая передается в качестве аргумента другой функции.
+/*function square(num) {
+return num * num;
+}*/
+/*function  each(arr, square) {
+let  resultArray = [];
+for (let elem of arr){
+    resultArray.push(square(elem));
+}
+return resultArray;
+}
+/!*alert(each([1,2,3,4,5], square));*!/
+//callback - функция является анонимной, т.е. без имени
+ const  result = each([1,2,3,4,5,6], function (num) {return num * num;}) ;
+ alert(result);*/
+/*БЛОК 2. Стрелочные функции
+* появились в ES6 и позволяют упростить работу*/
+/*let  add = function (a, b) {
+    return a + b;
+}
+let add2 = (a, b) => a +b;
+alert(add(5, 4));
+alert(add2(5,4))*/
+    // Если, при использовании стрелочной функции в ее теле будет использоватся одна функция, то она будет воспринята как возвращаемое значение return;
+    //Если Вам необходимо создать анонимную стрелочную функцию с несколькими стрелочными выражениями, то используем следующий вариант записи:
+ /*   let  f = (a, b) => {
+    let tmp = a ** b;
+    return tmp *2;
+    }
+    alert(f(5,4))*/
+ /*БЛОК 3. Оператор ... - это и оператор  SPREAD (распространение) или REST (остаток) в зависимости от контекста использования*/
+  /* function f(num1, num2) {
+alert(num1 + num2);
+   }
+   f(...[1,2,3,4,5,6]) //в данном случае произойдет разбиение массива на элементы, т.е. сработает как оператор SPREAD
+    function f(num1, num2, num3,...nums){ //
+        alert(num1 + num2 + num3 +`\n` + nums);
+    }*/
+  //Задачаю Создать функцию считающую сумму всех элементов массива, кроме первого и возвращающий ее.
+/*function f(ar) {
+    let sum = 0;
+    for (let elem of ar) {
+        sum += elem;
+    }
+    return sum;
+}let ar = [1,2,3,4,5];
+alert(f(ar));*/
+</script>-->
+<!--БЛОК 1 Базовая работа с массивами-->
+<script>
+  /*  let ar = []; //1 вариант
+    let ar2 = new Array(); //2 вариант менее предпочтительный
+    let  ar3 = [2];
+    alert( ar3[0]); //массив с элементом 2
+    let ar4 = new  Array(2, 3, 4);
+    alert (ar4 = new  Array(2));//массив длиной 2 элемента*/
+    // работа с длиной массива
+   /* let students = [`Мухамед`, `Евгений`, 'Сабина', `Настя`, `Илья`, `Сергей`, `Алексей`];
+    students[2] = "Денис";
+    console.log(students.length); //длина равна 7
+    //остпавить первые два элемента массива
+    students.length = 2;
+    console.log(students); //Мухамед, Евгений
+    students = 0; // нулевой массив очистить
+    console.log(students[3]); //underfind*/
+</script>
+<!--БЛОК2. Методы для работы с массивом-->
+<script>
+let students = [`Мухамед`, `Евгений`, 'Сабина', `Настя`, `Илья`, `Сергей`, `Алексей`];
+//метод pop() - Удаления последнего элемента массива, возвращает удаляемый элемент
+    console.log((students.pop())); //Алексей
+    console.log(students);
+    //обавить в конец массива
+    console.log(students.push(`Алексей`))// возвращена длина массива
+
+</script>
+</body>
+</html>
